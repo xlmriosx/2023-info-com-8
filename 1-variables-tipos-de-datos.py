@@ -4,8 +4,9 @@ print("hola mundo")
 
 ### Tipos de datos simples
 enteros = 11 # int -> integer -> entero/// = es operador de asignacion
-reales = 11.22 # float -> reales (?)
-    # tipos string, cadenas de caracteres
+reales = 11.2 # float -> reales (?)
+
+# tipos string, cadenas de caracteres
 strings = 'hola'
 strings1 = "hola"
 strings3 = f"hola"
@@ -35,7 +36,7 @@ listas.pop(1) # saca por indice, en este caso el num 13
 
 # son estructuras de datos complejas estaticas
 tuplas = (1, 3, 32, 13, 15)
-print('elemento 32 de la tupla:', tuplas[2])
+print('elemento de la posicion 2:', tuplas[2])
 # tuplas[2]=23 # no se puede cambiar los valores de las tuplas
 # print(tuplas[2])
 
