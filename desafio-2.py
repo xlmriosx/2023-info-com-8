@@ -19,8 +19,6 @@ letra1 = input("Ingrese la letra 1 a eleccion: ")
 letra2 = input("Ingrese la letra 2 a eleccion: ")
 letra3 = input("Ingrese la letra 3 a eleccion: ")
 
-
-
 # 1- Cantidad de veces que aparece cada una de letras que eligió.
 # Tip 1: almacenar las letras en una lista para usar algún método de contar un substring en un
 # string
