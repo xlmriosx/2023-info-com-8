@@ -27,3 +27,30 @@ while(a!=10):
     print(a) # para cortar un programa que no para se usa: CTRL+C
     a += 1
 
+# for i in range(1,11):
+#     print("Numero", i)
+#     if(i == 5):
+#         break
+
+# for j in range(1,4):
+#     print("Numero", j)
+# intentos = 0
+# while True:
+#     password = input('Ingrese su contraseña: ')
+#     intentos += 1
+#     if(password == 'root'):
+#         print("Bienvenido a su cuenta")
+#         break
+#     elif(intentos == 3):
+#         print("Tuviste muchos intentos fallidos. Se bloqueo tu cuenta.")
+#         break
+#     else:
+#         print(f"Intente denuevo. Quedan {3-intentos} intentos")
+
+
+# cont = 0
+# continua = input('Continuamos?. Ingrese 1 para continuar: ')
+# while continua=='1':
+#     cont += 1
+#     print(f"Continuamos {cont} veces")
+#     continua = input('Continuamos?. Ingrese 1 para continuar: ')
