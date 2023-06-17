@@ -25,3 +25,10 @@
 
 6. Run server Django
 `python manage.py runserver`
+
+7. Initialize an application
+`python manage.py startapp locro`
+
+8. Apply migrations
+`python manage.py migrate`
+

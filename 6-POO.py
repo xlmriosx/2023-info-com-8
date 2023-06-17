@@ -43,6 +43,9 @@
 # Clase Publico(Usuario)
 # -atributo: es_publico
 # -métodos: registrar(), comentar()
+#####################################################
+#####################################################
+#####################################################
 
 class Usuario:
     def __init__(self, id=None, nombre=None, apellido=None, telefono=None, username=None, email=None, contrasenia=None, fecha_de_registro=None, avatar=None, estado=None, online=None):
@@ -93,7 +96,60 @@ class Usuario:
 # online_persona = persona.get_online()
 # print(f'Estado {estado_persona}, Online {online_persona}')
 
+# clase Articulo
+# id, id_usuario, titulo, resumen, contenido, fecha_publicacion, imagen, estado
+class Articulo:
+    def __init__(self, id, id_usuario, titulo, resumen, contenido, fecha_publicacion, imagen, estado):
+        self.id = id 
+        self.id_usuario = id_usuario
+        self.titulo = titulo
+        self.resumen = resumen
+        self.contenido = contenido
+        self.fecha_publicacion = fecha_publicacion
+        self.imagen = imagen 
+        self.estado = estado
 
+# clase Comentario
+# id, id_articulo, id_usuario, contenido, fecha_hora, estado  
+class Comentario:
+    def __init__(self, id, id_articulo, id_usuario, contenido, fecha_hora, estado):
+        self.id = id
+        self.id_articulo = id_articulo
+        self.id_usuario = id_usuario
+        self.contenido = contenido
+        self.fecha_hora = fecha_hora
+        self.estado = estado
+
+# clase Colaborador(Usuario)
+# atributos: es_colaborador
+# métodos: registrar(POR HERENCIA), comentar(), publicar()
+class Colaborador(Usuario):
+    es_colaborador = True
+
+    def __init__(self, id, nombre, apellido, telefono, username, email, contrasenia, fecha_de_registro, avatar, estado, online):
+        super().__init__(id, nombre, apellido, telefono, username, email, contrasenia, fecha_de_registro, avatar, estado, online)
+
+    def comentar(self):
+        return Comentario(
+            id=input("Ingrese id: "), 
+            id_articulo=input("Ingrese id_articulo: "), 
+            id_usuario=self.id,
+            contenido=input("Ingrese contenido: "), 
+            fecha_hora=input("Ingrese fecha_hora: "), 
+            estado=input("Ingrese estado: "))
+
+    def publicar(self):
+        return Articulo(
+            id=input("Ingrese id: "),
+            id_usuario=self.id,
+            titulo=input("Ingrese titulo: "),
+            resumen=input("Ingrese resumen: "),
+            contenido=input("Ingrese contenido: "),
+            fecha_publicacion=input("Ingrese fecha_publicacion: "),
+            imagen=input("Ingrese imagen: "),
+            estado=input("Ingrese estado: "))
+    
+###
 class Publico(Usuario):
     es_publico = True
 
@@ -103,8 +159,10 @@ class Publico(Usuario):
     def get_es_publico(self):
         return self.es_publico
 
-obj_publico = Publico()
-obj_publico.registrar()
-var_pub = obj_publico.get_es_publico()
-print(f'Mediante metodo: {var_pub}, mediante acceso al atrib {obj_publico.es_publico}')
-print(f'Obtener username {obj_publico.get_username()}')
+# obj_publico = Publico()
+# obj_publico.registrar()
+# var_pub = obj_publico.get_es_publico()
+# print(f'Mediante metodo: {var_pub}, mediante acceso al atrib {obj_publico.es_publico}')
+# print(f'Obtener username {obj_publico.get_username()}')
+
+
