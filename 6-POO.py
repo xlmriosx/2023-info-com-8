@@ -165,4 +165,48 @@ class Publico(Usuario):
 # print(f'Mediante metodo: {var_pub}, mediante acceso al atrib {obj_publico.es_publico}')
 # print(f'Obtener username {obj_publico.get_username()}')
 
+# Cuestionario Semanal 9: POO 🐱‍💻
 
+# Los objetos tienen metodos que definen su comportamiento
+# Opciones: No hay relacion, si, no
+# Respuesta si
+
+# La herencia sirve para obtener las caracteristicas de una clase
+# Opciones: Verdadero, Falso
+# Respuesta: Verdadero
+
+# En Encapsulamiento
+# Opciones: 
+# -Nos permite heredar atributos y métodos de una clase Madre
+# -Nos permite sobreescribir métodos heredados
+# -Nos permite abstraernos de caracteristicas no relevantes para el modelo
+# -Nos permite ocultar ciertas caracteristicas o métodos para no ser accedidas fuera del dominio de la clase
+# Respuesta: Nos permite ocultar ciertas caracteristicas o métodos para no ser accedidas fuera del dominio de la clase
+
+# Un atributo estatico de clase es un atributo que se aplica a todas las instancias de una clase en lugar de a 
+# instancias individuales
+# Opciones: Falso, Verdadero, No siempre ocurrse asi
+# Respuesta: Verdadero
+
+# En cual de las siguientes opciones se indica que la clase Vendedor hereda de la clase Usuario
+# opciones:
+# -from vendedor import Vendedor
+# -ven = Vendedor()
+# -class Vendedor(Usuario):
+# -Vendedor = Usuario()
+# Respuesta: class Vendedor(Usuario):
+
+# Dentro de un programa pueden existir instancias de una clase Abstracta
+# Opciones: Verdadero, Falso
+# Respuesta: Falso, porque no se pueden instanciar las clases abstractas
+
+# ¿Cuál es la descripción que crees que define mejor el concepto 'clase' en la programación orientada a objetos?
+# Opciones: 
+# -Es un tipo particular de variable
+# -Es un concepto similar al de 'array'
+# -Es una categoria de datos ordenada secuencialmente
+# -Es un modelo o plantilla a partir de la cual creamos objetos
+# Respuesta: Es un modelo o plantilla a partir de la cual creamos objetos
+
+# Es la acción u operación que realiza un objeto
+# Respuesta: metodo
