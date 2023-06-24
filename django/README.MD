@@ -1,4 +1,23 @@
 # Creating my first project Django
+myenv/ *
+myproject/ **
+├── manage.py
+├── myproject/
+│ ├── __init__.py
+│ ├── settings.py
+│ ├── urls.py
+│ └── wsgi.py
+├── myapp/
+│ ├── migrations/
+│ ├── __init__.py
+│ ├── admin.py
+│ ├── models.py
+│ ├── views.py
+│ └── ...
+└── ...
+
+* - para ejecutar comandos del entorno(activarlo o desactivarlo)
+** - para ejecutar comandos del manage.py
 
 ## Commands
 
@@ -6,7 +25,7 @@
 `python -m venv NEW_ENV` NEW_ENV puede tener cualqueir nombre
 
 2. Activate virtual environment
-`NEW_ENV\Scripts\activate` Windows
+`NEW_ENV\Scripts\activate` Windows estando fuera de la carpeta NEW_ENV
 `Source ./bin/activate` Linux
 
 2.1. Error? Ejecucion de scripts deshabilitada
@@ -26,9 +45,39 @@
 6. Run server Django
 `python manage.py runserver`
 
-7. Initialize an application
+7. Shut Down server
+`CTRL + C`
+
+8. Initialize an application with name like locro
 `python manage.py startapp locro`
 
-8. Apply migrations
+9. Apply migrations
 `python manage.py migrate`
+
+## Creating a Super User
+`python manage.py createsuperuser`
+
+OperationalError: no such table: auth_user --> Run `python manage.py migrate`
+
+Link: http://localhost:8000/admin
+
+## Configuration of database
+
+- Install dependency
+`pip install mysqlclient`
+
+- In General/INFO/settings.py
+```
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "informatorio",
+        "USER": "root",
+        "PASSWORD": "root",
+        "HOST": "localhost",
+        "PORT": "3306",
+    }
+}
+```
+
 
