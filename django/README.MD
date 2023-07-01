@@ -1,24 +1,40 @@
 # Creating my first project Django
-myenv/ *
-myproject/ **
-├── manage.py
-├── myproject/
-│ ├── __init__.py
-│ ├── settings.py
-│ ├── urls.py
-│ └── wsgi.py
-├── myapp/
-│ ├── migrations/
-│ ├── __init__.py
-│ ├── admin.py
-│ ├── models.py
-│ ├── views.py
+```
+content-project/ (1) <--- Carpeta contenedora del proyecto
+├── myenv/
+├── myproject/ (2) <--- Carpeta del proyecto
+│ ├── manage.py
+│ ├── myproject/
+│ │ ├── __init__.py
+│ │ ├── settings.py
+│ │ ├── urls.py
+│ │ └── wsgi.py
+│ ├── myapp/
+│ │ ├── migrations/
+│ │ ├── __init__.py
+│ │ ├── admin.py
+│ │ ├── models.py
+│ │ ├── views.py
+│ │ └── ...
 │ └── ...
 └── ...
 
-* - para ejecutar comandos del entorno(activarlo o desactivarlo)
-** - para ejecutar comandos del manage.py
+(1) - Para ejecutar comandos del entorno(activarlo o desactivarlo)
+- myenv\Scripts\activate
+- myenv\Scripts\deactivate
+- python -m pip install --upgrade pip
+- pip install nombre_del_paquete
+- etc
 
+(2) - Para ejecutar comandos del manage.py
+- pyhton manage.py runserver
+- pyhton manage.py makemigrations
+- pyhton manage.py migrate
+- pyhton manage.py createsuperuser
+- pyhton manage.py startapp myapp
+- pip install nombre_del_paquete
+- etc
+```
 ## Commands
 
 1. Creation of virtual environment
