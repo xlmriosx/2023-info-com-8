@@ -3,6 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preguntas</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ejemplo/style.css' %}">
 </head>
 <body>
     {% if pregunta_lista %}
@@ -10,12 +12,23 @@
         <tr>
             <th>ID</th>
             <th>Pregunta</th>
+            <th>Opciones</th>
             <th>Fecha publicacion</th>
         </tr>
         {% for pregunta in pregunta_lista %}
             <tr>
                 <td>{{ pregunta.id }}</td>
                 <td>{{ pregunta.pregunta_texto }}</td>
+                
+                <td>
+                    <ul>
+                    {% for opcion in opcion_lista %}
+                        {% if opcion.pregunta_id == pregunta.id %}
+                            <li>{{ opcion.opcion_texto }}</li>
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                </td>
                 <td>{{ pregunta.fecha_publicacion }}</td>
                 <td><a href="/ejemplo/{{ pregunta.id }}/">Ver</a></td>
             </tr>

@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opciones</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ejemplo/style.css' %}">
+</head>
+<body>
+    {% if opcion_lista %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Opcion</th>
+            <th>Votos</th>
+            <th>ID Pregunta</th>
+        </tr>
+        {% for opcion in opcion_lista %}
+        <tr>
+            <td>{{ opcion.id }}</td>
+            <td>{{ opcion.opcion_texto }}</td>
+            <td>{{ opcion.votos }}</td>
+            <td>{{ opcion.pregunta_id }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <h3>No existen opciones en la BD.</h3>
+    {% endif %}
+    
+</body>
+</html>

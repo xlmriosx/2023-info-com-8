@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{ pregunta.pregunta_text }}</h1>
+
+    <ul>
+    {% for opcion in pregunta.opcion_set.all %}
+        <li>{{ opcion.opcion_text }} -- {{ opcion.votes }} vote{{ opcion.votes|pluralize }}</li>
+    {% endfor %}
+    </ul>
+
+    <a href="{% url 'ejemplo:detail' pregunta.id %}">Votar denuevo?</a>
+</body>
+</html>

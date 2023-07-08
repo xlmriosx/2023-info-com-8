@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pregunta</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ejemplo/style.css' %}">
+</head>
+<body>
+    {% if pregunta_lista %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Pregunta</th>
+            <th>Fecha Publicacion</th>
+        </tr>
+        {% for pregunta in pregunta_lista %}
+        <tr>
+            <td>{{ pregunta.id }}</td>
+            <td>{{ pregunta.pregunta_texto }}</td>
+            <td>{{ pregunta.fecha_publicacion }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <h3>No existen preguntas en la BD.</h3>
+    {% endif %}
+    
+</body>
+</html>
